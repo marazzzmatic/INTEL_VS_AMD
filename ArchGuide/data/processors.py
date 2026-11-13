@@ -1,10 +1,10 @@
 import sqlalchemy
 from sqlalchemy import orm
-from db_session import SqlAlchemyBase
+from data.db_session import SqlAlchemyBase
 
 
 class Processor(SqlAlchemyBase):
-    __table_name__ = "processors"
+    __tablename__ = "processors"
     # основное
     id = sqlalchemy.Column(sqlalchemy.Integer, autoincrement=True, primary_key=True)
     name = sqlalchemy.Column(sqlalchemy.String)
